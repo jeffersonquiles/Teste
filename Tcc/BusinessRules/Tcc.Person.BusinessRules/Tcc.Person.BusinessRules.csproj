@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{798F63B0-5F7D-40A0-AA30-F8729DDBB25D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tcc.Person.BusinessRules</RootNamespace>
+    <AssemblyName>Tcc.Person.BusinessRules</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PersonBusinessRules.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BusinessEntities\Tcc.Location.BusinessEntities\Tcc.Location.BusinessEntities.csproj">
+      <Project>{bd93013b-9e6a-4ec6-b870-2f86057ede11}</Project>
+      <Name>Tcc.Location.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BusinessEntities\Tcc.Person\Tcc.Person.BusinessEntities.csproj">
+      <Project>{0e59ae1e-22eb-4d53-800c-fd00d32938df}</Project>
+      <Name>Tcc.Person.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Tcc.Common\Tcc.Common.csproj">
+      <Project>{9e9015ac-871e-4275-be2a-8f6bccf96548}</Project>
+      <Name>Tcc.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\Marfrig.Framework.BusinessEntities\Tcc.Framework.BusinessEntities.csproj">
+      <Project>{331dcdec-1790-4097-88ef-3cc6d3011d2d}</Project>
+      <Name>Tcc.Framework.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Providers\Marfrig.Core.Providers\Tcc.SqlServer.Base.Providers.csproj">
+      <Project>{61FB0FA9-6185-4F41-9912-0433D253D748}</Project>
+      <Name>Tcc.SqlServer.Base.Providers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tcc.Location.BusinessRules\Tcc.Location.BusinessRules.csproj">
+      <Project>{FA98D3EE-C6B9-4728-BD9B-8B888F91A8D4}</Project>
+      <Name>Tcc.Location.BusinessRules</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tcc.Person.BusinessRulesInterfaces\Tcc.Person.BusinessRulesInterfaces.csproj">
+      <Project>{55BC40F6-C7B6-418A-8301-2FBC34D09570}</Project>
+      <Name>Tcc.Person.BusinessRulesInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

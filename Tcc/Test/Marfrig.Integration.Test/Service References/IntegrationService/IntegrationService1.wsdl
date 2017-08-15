@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="urn:Marfrig.Integration.ServiceInterfaces" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:Marfrig.Integration.ServiceInterfaces" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:Marfrig.Integration.ServiceInterfaces/Imports">
+      <xsd:import schemaLocation="http://kelvin-notebook:8089/IntegrationService/IntegrationService.svc?xsd=xsd0" namespace="urn:Marfrig.Integration.ServiceInterfaces" />
+      <xsd:import schemaLocation="http://kelvin-notebook:8089/IntegrationService/IntegrationService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Marfrig.Integration.ServiceInterfaces.FaultContracts" />
+      <xsd:import schemaLocation="http://kelvin-notebook:8089/IntegrationService/IntegrationService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://kelvin-notebook:8089/IntegrationService/IntegrationService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Marfrig.Integration.ServiceInterfaces.MessageContracts" />
+      <xsd:import schemaLocation="http://kelvin-notebook:8089/IntegrationService/IntegrationService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Marfrig.Framework.Patterns.RequestResponse" />
+      <xsd:import schemaLocation="http://kelvin-notebook:8089/IntegrationService/IntegrationService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Marfrig.Order.BusinessEntities" />
+      <xsd:import schemaLocation="http://kelvin-notebook:8089/IntegrationService/IntegrationService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Marfrig.Framework.BusinessEntities" />
+      <xsd:import schemaLocation="http://kelvin-notebook:8089/IntegrationService/IntegrationService.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IntegrationService_ReceiveOrderTracking_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReceiveOrderTracking" />
+  </wsdl:message>
+  <wsdl:message name="IntegrationService_ReceiveOrderTracking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReceiveOrderTrackingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IntegrationService_ReceiveOrderTracking_ValidationExceptionFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Marfrig.Integration.ServiceInterfaces.FaultContracts" name="detail" element="q1:ValidationExceptionFault" />
+  </wsdl:message>
+  <wsdl:message name="IntegrationService_TestMethod_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestMethod" />
+  </wsdl:message>
+  <wsdl:message name="IntegrationService_TestMethod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestMethodResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IntegrationService">
+    <wsdl:operation name="ReceiveOrderTracking">
+      <wsdl:input wsaw:Action="urn:Marfrig.Integration.ServiceInterfaces.ReceiveOrderTracking" message="tns:IntegrationService_ReceiveOrderTracking_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Marfrig.Integration.ServiceInterfaces/IntegrationService/ReceiveOrderTrackingResponse" message="tns:IntegrationService_ReceiveOrderTracking_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Marfrig.Integration.ServiceInterfaces/IntegrationService/ReceiveOrderTrackingValidationExceptionFaultFault" name="ValidationExceptionFaultFault" message="tns:IntegrationService_ReceiveOrderTracking_ValidationExceptionFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TestMethod">
+      <wsdl:input wsaw:Action="urn:Marfrig.Integration.ServiceInterfaces/IntegrationService/TestMethod" message="tns:IntegrationService_TestMethod_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Marfrig.Integration.ServiceInterfaces/IntegrationService/TestMethodResponse" message="tns:IntegrationService_TestMethod_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

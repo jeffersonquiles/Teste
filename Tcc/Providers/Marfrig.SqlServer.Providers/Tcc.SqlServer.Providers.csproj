@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{862DA5B6-5952-4078-8F0B-F1DEF3A59D2C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tcc.SqlServer.Providers</RootNamespace>
+    <AssemblyName>Tcc.SqlServer.Providers</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentData, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Hosts\Marfrig.Integration.Host\packages\FluentData.3.0.1.0\lib\FluentData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\Hosts\Marfrig.Integration.Host\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Hosts\Marfrig.Integration.Host\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Hosts\Marfrig.Integration.Host\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Hosts\Marfrig.Integration.Host\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CoreSqlProvider.cs" />
+    <Compile Include="GynSqlProvider.cs" />
+    <Compile Include="LocationSqlProvider.cs" />
+    <Compile Include="PersonSqlProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TccContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BusinessEntities\Tcc.Core.BusinessEntities\Tcc.Core.BusinessEntities.csproj">
+      <Project>{E82F0E93-4CCD-47E3-96E8-598FF4B9921F}</Project>
+      <Name>Tcc.Core.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BusinessEntities\Tcc.Gyn.BusinessEntities\Tcc.Gyn.BusinessEntities.csproj">
+      <Project>{11b840af-7f1a-454f-a203-c75f195c06dc}</Project>
+      <Name>Tcc.Gyn.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BusinessEntities\Tcc.Location.BusinessEntities\Tcc.Location.BusinessEntities.csproj">
+      <Project>{bd93013b-9e6a-4ec6-b870-2f86057ede11}</Project>
+      <Name>Tcc.Location.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BusinessEntities\Tcc.Person\Tcc.Person.BusinessEntities.csproj">
+      <Project>{0e59ae1e-22eb-4d53-800c-fd00d32938df}</Project>
+      <Name>Tcc.Person.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Tcc.Common\Tcc.Common.csproj">
+      <Project>{9E9015AC-871E-4275-BE2A-8F6BCCF96548}</Project>
+      <Name>Tcc.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\Marfrig.Framework.BusinessEntities\Tcc.Framework.BusinessEntities.csproj">
+      <Project>{331dcdec-1790-4097-88ef-3cc6d3011d2d}</Project>
+      <Name>Tcc.Framework.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\Marfrig.Framework.Patterns.Providers\Tcc.Framework.Patterns.Providers.csproj">
+      <Project>{e49b3a16-ca12-4340-848e-492e55651f5a}</Project>
+      <Name>Tcc.Framework.Patterns.Providers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\Marfrig.Framework.Patterns.RequestResponse\Tcc.Framework.Patterns.RequestResponse.csproj">
+      <Project>{962d9a10-a4c3-4602-8244-368aa31addb7}</Project>
+      <Name>Tcc.Framework.Patterns.RequestResponse</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\Marfrig.Framework.Patterns.TranslateEntity\Tcc.Framework.Patterns.TranslateEntity.csproj">
+      <Project>{3f49bdd3-9132-49e3-8ac9-e38dd983a599}</Project>
+      <Name>Tcc.Framework.Patterns.TranslateEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Marfrig.Core.Providers\Tcc.SqlServer.Base.Providers.csproj">
+      <Project>{61fb0fa9-6185-4f41-9912-0433d253d748}</Project>
+      <Name>Tcc.SqlServer.Base.Providers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

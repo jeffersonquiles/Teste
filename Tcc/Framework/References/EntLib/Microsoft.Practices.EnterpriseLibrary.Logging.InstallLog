@@ -1,0 +1,35 @@
+﻿Installing assembly 'C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.EnterpriseLibrary.Logging.dll'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+   logfile = C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.EnterpriseLibrary.Logging.InstallLog
+Installing WMI Schema: Started
+Registering assembly: Microsoft.Practices.EnterpriseLibrary.Logging_SN_31bf3856ad364e35_Version_4.1.0.0
+Ensuring that namespace exists: root\MicrosoftWmiNet
+Ensuring that class exists: root\MicrosoftWmiNet:WMINET_Instrumentation
+Ensuring that class exists: root\MicrosoftWmiNet:WMINET_InstrumentedNamespaces
+Ensuring that class exists: root\MicrosoftWmiNet:WMINET_Naming
+Ensuring that namespace exists: root\EnterpriseLibrary
+Ensuring that class exists: root\EnterpriseLibrary:WMINET_Instrumentation
+Ensuring that class exists: root\EnterpriseLibrary:WMINET_InstrumentedAssembly
+Ensuring that class exists: root\EnterpriseLibrary:MSFT_DecoupledProvider
+Ensuring that class exists: root\EnterpriseLibrary:WMINET_ManagedAssemblyProvider
+Installing WMI Schema: Finished
+Creating EventLog source Enterprise Library Logging in log Application...
+Creating performance counter category Enterprise Library Logging Counters.
+**** WMI schema install start ****
+**** WMI schema install start ****
+**** WMI schema install end ****
+Committing assembly 'C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.EnterpriseLibrary.Logging.dll'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+   logfile = C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.EnterpriseLibrary.Logging.InstallLog
+Microsoft (R) MOF Compiler Version 6.0.6000.16386
+Copyright (c) Microsoft Corp. 1997-2006. All rights reserved.
+Parsing MOF file: C:\Windows\system32\wbem\Microsoft.Practices.EnterpriseLibrary.Logging_v2.0.50727.mof
+MOF file has been successfully parsed
+Storing data in the repository...
+Done!
+
+

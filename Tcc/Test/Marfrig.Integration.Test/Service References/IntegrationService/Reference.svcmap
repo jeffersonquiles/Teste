@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="10c12356-91e8-4b6c-9327-399f1f592641" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8089/IntegrationService/IntegrationService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IntegrationService7.xsd" MetadataType="Schema" ID="b86b48d4-0857-4c46-aa1d-7d957752e593" SourceId="1" SourceUrl="http://kelvin-notebook:8089/IntegrationService/IntegrationService.svc?xsd=xsd7" />
+    <MetadataFile FileName="IntegrationService.wsdl" MetadataType="Wsdl" ID="0bae399c-696a-4c94-b34c-79d68db810e2" SourceId="1" SourceUrl="http://kelvin-notebook:8089/IntegrationService/IntegrationService.svc?wsdl" />
+    <MetadataFile FileName="IntegrationService.xsd" MetadataType="Schema" ID="98d84813-6dc5-4c6e-a71a-74024c077807" SourceId="1" SourceUrl="http://kelvin-notebook:8089/IntegrationService/IntegrationService.svc?xsd=xsd5" />
+    <MetadataFile FileName="IntegrationService1.xsd" MetadataType="Schema" ID="a5919a09-15cb-4681-928c-2348a9d474c9" SourceId="1" SourceUrl="http://kelvin-notebook:8089/IntegrationService/IntegrationService.svc?xsd=xsd4" />
+    <MetadataFile FileName="IntegrationService.disco" MetadataType="Disco" ID="52511140-a074-4a13-96a8-be82efaa7b72" SourceId="1" SourceUrl="http://kelvin-notebook:8089/IntegrationService/IntegrationService.svc?disco" />
+    <MetadataFile FileName="IntegrationService1.wsdl" MetadataType="Wsdl" ID="b98b4716-43e9-4e98-984a-aa2730b90102" SourceId="1" SourceUrl="http://kelvin-notebook:8089/IntegrationService/IntegrationService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="IntegrationService2.xsd" MetadataType="Schema" ID="976ca139-eac5-4939-807c-9cf8359a1cf3" SourceId="1" SourceUrl="http://kelvin-notebook:8089/IntegrationService/IntegrationService.svc?xsd=xsd6" />
+    <MetadataFile FileName="IntegrationService3.xsd" MetadataType="Schema" ID="11ddafd1-dddb-4f88-bb5e-6aa1dfa41cb6" SourceId="1" SourceUrl="http://kelvin-notebook:8089/IntegrationService/IntegrationService.svc?xsd=xsd3" />
+    <MetadataFile FileName="IntegrationService4.xsd" MetadataType="Schema" ID="3b56ed2d-915f-4f4b-b493-27783637de45" SourceId="1" SourceUrl="http://kelvin-notebook:8089/IntegrationService/IntegrationService.svc?xsd=xsd2" />
+    <MetadataFile FileName="IntegrationService5.xsd" MetadataType="Schema" ID="c095d1fc-1e45-4f26-bc28-9af1f932465c" SourceId="1" SourceUrl="http://kelvin-notebook:8089/IntegrationService/IntegrationService.svc?xsd=xsd1" />
+    <MetadataFile FileName="IntegrationService6.xsd" MetadataType="Schema" ID="5e4a0e4a-5f98-4f41-be0e-8aa3c5631c1a" SourceId="1" SourceUrl="http://kelvin-notebook:8089/IntegrationService/IntegrationService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

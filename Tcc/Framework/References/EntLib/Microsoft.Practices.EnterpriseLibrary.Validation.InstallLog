@@ -1,0 +1,24 @@
+﻿Installing assembly 'C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll
+   logfile = C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.InstallLog
+Installing WMI Schema: Started
+Registering assembly: Microsoft.Practices.EnterpriseLibrary.Validation_SN_31bf3856ad364e35_Version_4.1.0.0
+Ensuring that namespace exists: root\MicrosoftWmiNet
+Ensuring that class exists: root\MicrosoftWmiNet:WMINET_Instrumentation
+Ensuring that class exists: root\MicrosoftWmiNet:WMINET_InstrumentedNamespaces
+Ensuring that class exists: root\MicrosoftWmiNet:WMINET_Naming
+Ensuring that namespace exists: root\EnterpriseLibrary
+Ensuring that class exists: root\EnterpriseLibrary:WMINET_Instrumentation
+Ensuring that class exists: root\EnterpriseLibrary:WMINET_InstrumentedAssembly
+Ensuring that class exists: root\EnterpriseLibrary:MSFT_DecoupledProvider
+Ensuring that class exists: root\EnterpriseLibrary:WMINET_ManagedAssemblyProvider
+Installing WMI Schema: Finished
+Creating performance counter category Enterprise Library Validation Counters.
+Creating EventLog source Enterprise Library Validation in log Application...
+Committing assembly 'C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll
+   logfile = C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.InstallLog

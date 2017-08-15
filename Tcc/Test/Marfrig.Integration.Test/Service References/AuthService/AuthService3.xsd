@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Marfrig.Auth.BusinessEntities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Marfrig.Auth.BusinessEntities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://kelvin-notebook:8089/AuthService/AuthService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="AuthenticationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AuthToken" type="ser:guid" />
+      <xs:element minOccurs="0" name="Result" type="tns:ResultType" />
+      <xs:element minOccurs="0" name="UserAuthId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AuthenticationResult" nillable="true" type="tns:AuthenticationResult" />
+  <xs:simpleType name="ResultType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Success" />
+      <xs:enumeration value="Failed" />
+      <xs:enumeration value="Expired" />
+      <xs:enumeration value="Blocked" />
+      <xs:enumeration value="Invalid" />
+      <xs:enumeration value="InvalidLoginOrPassword" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ResultType" nillable="true" type="tns:ResultType" />
+</xs:schema>

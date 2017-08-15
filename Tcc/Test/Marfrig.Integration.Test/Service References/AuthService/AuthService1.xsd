@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="urn:Marfrig.Auth.ServiceInterfaces" elementFormDefault="qualified" targetNamespace="urn:Marfrig.Auth.ServiceInterfaces" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://kelvin-notebook:8089/AuthService/AuthService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Marfrig.Auth.ServiceInterfaces.MessageContracts" />
+  <xs:element name="Authenticate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Marfrig.Auth.ServiceInterfaces.MessageContracts" minOccurs="0" name="request" nillable="true" type="q1:AuthenticateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Marfrig.Auth.ServiceInterfaces.MessageContracts" minOccurs="0" name="AuthenticateResult" nillable="true" type="q2:AuthenticateResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

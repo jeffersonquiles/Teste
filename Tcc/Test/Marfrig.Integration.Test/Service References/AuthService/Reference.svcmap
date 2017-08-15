@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1c0dae01-e1cf-4c17-a9bd-9027c9378be4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8089/AuthService/AuthService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AuthService.disco" MetadataType="Disco" ID="ee1c0970-0827-449d-8981-510e3024e962" SourceId="1" SourceUrl="http://kelvin-notebook:8089/AuthService/AuthService.svc?disco" />
+    <MetadataFile FileName="AuthService.wsdl" MetadataType="Wsdl" ID="1febba73-ed17-4f03-bb2c-1a79a0610056" SourceId="1" SourceUrl="http://kelvin-notebook:8089/AuthService/AuthService.svc?wsdl" />
+    <MetadataFile FileName="AuthService.xsd" MetadataType="Schema" ID="23e64dde-de34-4a9f-9044-5e57a5e3959e" SourceId="1" SourceUrl="http://kelvin-notebook:8089/AuthService/AuthService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AuthService1.xsd" MetadataType="Schema" ID="0102e6be-bcdb-4264-9d02-c85182aafa37" SourceId="1" SourceUrl="http://kelvin-notebook:8089/AuthService/AuthService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AuthService2.xsd" MetadataType="Schema" ID="082cdfba-94b6-406a-a584-92fdf98f277f" SourceId="1" SourceUrl="http://kelvin-notebook:8089/AuthService/AuthService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AuthService1.wsdl" MetadataType="Wsdl" ID="8f178056-0e8d-4d2f-a050-7861a41d2b3e" SourceId="1" SourceUrl="http://kelvin-notebook:8089/AuthService/AuthService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="AuthService3.xsd" MetadataType="Schema" ID="7e73b584-2b0a-4bca-a7b2-7ed60b88c2c2" SourceId="1" SourceUrl="http://kelvin-notebook:8089/AuthService/AuthService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Marfrig.Integration.ServiceInterfaces.FaultContracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Marfrig.Integration.ServiceInterfaces.FaultContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://kelvin-notebook:8089/IntegrationService/IntegrationService.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://kelvin-notebook:8089/IntegrationService/IntegrationService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Marfrig.Framework.Patterns.RequestResponse" />
+  <xs:complexType name="ValidationExceptionFault">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Marfrig.Framework.Patterns.RequestResponse" base="q1:FaultBase">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="validations" nillable="true" type="q2:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ValidationExceptionFault" nillable="true" type="tns:ValidationExceptionFault" />
+</xs:schema>

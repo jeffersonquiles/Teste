@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Marfrig.Integration.ServiceInterfaces.MessageContracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Marfrig.Integration.ServiceInterfaces.MessageContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://kelvin-notebook:8089/IntegrationService/IntegrationService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Marfrig.Order.BusinessEntities" />
+  <xs:import schemaLocation="http://kelvin-notebook:8089/IntegrationService/IntegrationService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Marfrig.Framework.Patterns.RequestResponse" />
+  <xs:complexType name="OrderTrackingRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Marfrig.Framework.Patterns.RequestResponse" base="q1:RequestContractBase">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Marfrig.Order.BusinessEntities" minOccurs="0" name="Trackings" nillable="true" type="q2:ArrayOfOrderTracking" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderTrackingRequest" nillable="true" type="tns:OrderTrackingRequest" />
+  <xs:complexType name="OrderTrackingResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Marfrig.Framework.Patterns.RequestResponse" base="q3:ResponseContractBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Result" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderTrackingResponse" nillable="true" type="tns:OrderTrackingResponse" />
+</xs:schema>

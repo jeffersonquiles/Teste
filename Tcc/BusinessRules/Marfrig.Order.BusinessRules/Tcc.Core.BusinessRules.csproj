@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6879001B-60CE-4699-A711-9F8F906301A9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tcc.Core.BusinessRules</RootNamespace>
+    <AssemblyName>Tcc.Core.BusinessRules</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\GClaims Framework\References\EntLib\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CoreBusinessRules.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BusinessEntities\Tcc.Core.BusinessEntities\Tcc.Core.BusinessEntities.csproj">
+      <Project>{E82F0E93-4CCD-47E3-96E8-598FF4B9921F}</Project>
+      <Name>Tcc.Core.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Tcc.Common\Tcc.Common.csproj">
+      <Project>{9E9015AC-871E-4275-BE2A-8F6BCCF96548}</Project>
+      <Name>Tcc.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Exceptions\Marfrig.Exceptions\Tcc.Exceptions.csproj">
+      <Project>{8d04dfc7-338b-458c-9181-f9bafe9024c2}</Project>
+      <Name>Tcc.Exceptions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\Marfrig.Framework.BusinessEntities\Tcc.Framework.BusinessEntities.csproj">
+      <Project>{331dcdec-1790-4097-88ef-3cc6d3011d2d}</Project>
+      <Name>Tcc.Framework.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\Marfrig.Framework.Patterns.Providers\Tcc.Framework.Patterns.Providers.csproj">
+      <Project>{E49B3A16-CA12-4340-848E-492E55651F5A}</Project>
+      <Name>Tcc.Framework.Patterns.Providers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Providers\Marfrig.Core.Providers\Tcc.SqlServer.Base.Providers.csproj">
+      <Project>{61fb0fa9-6185-4f41-9912-0433d253d748}</Project>
+      <Name>Tcc.SqlServer.Base.Providers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Providers\Marfrig.SqlServer.Providers\Tcc.SqlServer.Providers.csproj">
+      <Project>{862DA5B6-5952-4078-8F0B-F1DEF3A59D2C}</Project>
+      <Name>Tcc.SqlServer.Providers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Marfrig.Order.BusinessRulesInterfaces\Tcc.Core.BusinessRulesInterfaces.csproj">
+      <Project>{25d0f064-089c-4712-a410-2ab8c008a695}</Project>
+      <Name>Tcc.Core.BusinessRulesInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

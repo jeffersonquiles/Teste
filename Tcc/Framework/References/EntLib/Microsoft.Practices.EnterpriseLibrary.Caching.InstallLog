@@ -1,0 +1,35 @@
+﻿Installing assembly 'C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.EnterpriseLibrary.Caching.dll'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+   logfile = C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.EnterpriseLibrary.Caching.InstallLog
+Installing WMI Schema: Started
+Registering assembly: Microsoft.Practices.EnterpriseLibrary.Caching_SN_31bf3856ad364e35_Version_4.1.0.0
+Ensuring that namespace exists: root\MicrosoftWmiNet
+Ensuring that class exists: root\MicrosoftWmiNet:WMINET_Instrumentation
+Ensuring that class exists: root\MicrosoftWmiNet:WMINET_InstrumentedNamespaces
+Ensuring that class exists: root\MicrosoftWmiNet:WMINET_Naming
+Ensuring that namespace exists: root\EnterpriseLibrary
+Ensuring that class exists: root\EnterpriseLibrary:WMINET_Instrumentation
+Ensuring that class exists: root\EnterpriseLibrary:WMINET_InstrumentedAssembly
+Ensuring that class exists: root\EnterpriseLibrary:MSFT_DecoupledProvider
+Ensuring that class exists: root\EnterpriseLibrary:WMINET_ManagedAssemblyProvider
+Installing WMI Schema: Finished
+Creating performance counter category Enterprise Library Caching Counters.
+Creating EventLog source Enterprise Library Caching in log Application...
+**** WMI schema install start ****
+**** WMI schema install start ****
+**** WMI schema install end ****
+Committing assembly 'C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.EnterpriseLibrary.Caching.dll'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+   logfile = C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.EnterpriseLibrary.Caching.InstallLog
+Microsoft (R) MOF Compiler Version 6.0.6000.16386
+Copyright (c) Microsoft Corp. 1997-2006. All rights reserved.
+Parsing MOF file: C:\Windows\system32\wbem\Microsoft.Practices.EnterpriseLibrary.Caching_v2.0.50727.mof
+MOF file has been successfully parsed
+Storing data in the repository...
+Done!
+
+
