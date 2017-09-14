@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Tcc.Core.BusinessEntities
 {
-    public class ClassificationType: BusinessEntityBase<ClassificationType>
+    public class ClassificationType
     {
         public string Name { get; set; }
 

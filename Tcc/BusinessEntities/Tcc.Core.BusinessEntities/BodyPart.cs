@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Tcc.Core.BusinessEntities
 {
-    public class BodyPart: BusinessEntityBase<BodyPart>
+    public class BodyPart
     {
         public string Name { get; set; }
 

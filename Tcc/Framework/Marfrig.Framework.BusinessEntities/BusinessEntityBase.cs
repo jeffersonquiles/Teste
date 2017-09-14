@@ -1,5 +1,6 @@
 ﻿using Tcc.Framework.Patterns.TranslateEntity;
 using Microsoft.Practices.EnterpriseLibrary.Validation;
+using Microsoft.Practices.EnterpriseLibrary.Common;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -187,7 +188,7 @@ namespace Tcc.Framework.BusinessEntities
                     PropertyInfo propDerived = typeof(T).GetProperty(propBase.Name);
                     propDerived.SetValue(tDerived, propBase.GetValue(this, null), null);
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                 }
             }

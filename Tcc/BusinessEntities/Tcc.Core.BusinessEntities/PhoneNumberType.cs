@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Tcc.Core.BusinessEntities
 {
-    public class PhoneNumberType : BusinessEntityBase<PhoneNumberType>
+    public class PhoneNumberType 
     {
         public string Name { get; set; }
 

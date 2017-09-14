@@ -12,7 +12,7 @@ namespace Tcc.Person.BusinessRulesInterfaces
 
         #region Person
 
-        IList<Tcc.Person.BusinessEntities.Person> GetPeoples();
+        IList<Tcc.Person.BusinessEntities.Person> GetPeople();
 
         bool SavePerson(Person.BusinessEntities.Person entity);
 

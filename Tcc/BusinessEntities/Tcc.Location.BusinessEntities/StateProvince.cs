@@ -3,7 +3,7 @@
 
 namespace Tcc.Location.BusinessEntities
 {
-    public class StateProvince : BusinessEntityBase<StateProvince>
+    public class StateProvince 
     {
         public int CountryId { get; set; }
         public string Name { get; set; }

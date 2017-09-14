@@ -1,11 +1,11 @@
-﻿using Tcc.Framework.BusinessEntities;
-using Microsoft.Practices.EnterpriseLibrary.Validation;
+﻿using Microsoft.Practices.EnterpriseLibrary.Validation;
 using Microsoft.Practices.EnterpriseLibrary.Validation.Validators;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tcc.Common;
 
 namespace Tcc.Person.BusinessEntities
 {
@@ -16,7 +16,8 @@ namespace Tcc.Person.BusinessEntities
         public string Email { get; set; }
         public string Facebook { get; set; }
         public string Gender { get; set; }
-        public DateTime BirthDay { get; set; }
+        public DateTime BirtyDay { get; set; }
+
 
         public Person()
         {
@@ -39,9 +40,9 @@ namespace Tcc.Person.BusinessEntities
             {
                 results.AddResult(new ValidationResult("Informe o email.", null, "Gender", "Person", null));
             }
-            if (BirthDay == null)
+            if (BirtyDay == null)
             {
-                results.AddResult(new ValidationResult("Informe a data de nascimento.", null, "BirthDay", "Person", null));
+                results.AddResult(new ValidationResult("Informe a data de nascimento.", null, "BirtyDay", "Person", null));
             }
 
         }

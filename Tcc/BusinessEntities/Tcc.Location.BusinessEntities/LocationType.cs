@@ -1,5 +1,7 @@
-﻿using Tcc.Framework.BusinessEntities;
+﻿
 
+
+using Tcc.Common;
 
 namespace Tcc.Location.BusinessEntities
 {

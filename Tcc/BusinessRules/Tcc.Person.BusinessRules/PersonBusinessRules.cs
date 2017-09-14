@@ -28,16 +28,19 @@ namespace Tcc.Person.BusinessRules
 
         #region Person
 
-        public IList<Tcc.Person.BusinessEntities.Person> GetPeoples()
+        public IList<Tcc.Person.BusinessEntities.Person> GetPeople()
         {
-            return SqlPersonProvider.GetPeoples();
+            return SqlPersonProvider.GetPeople();
         }
 
         public bool SavePerson(Person.BusinessEntities.Person entity)
         {
             entity.UpdateDate = DateTime.Now;
-            entity.UpdateByPersonId = 1;
+            entity.UpdateByPersonId = 2;
             entity.IsDeleted = false;
+            entity.BirtyDay = DateTime.Now;
+            entity.CreateDate = entity.UpdateDate;
+            entity.CreateByPersonId = entity.UpdateByPersonId;
 
             if (entity.Id > 0)
             {
@@ -45,8 +48,6 @@ namespace Tcc.Person.BusinessRules
             }
             else
             {
-                entity.CreateDate = entity.UpdateDate;
-                entity.CreateByPersonId = entity.UpdateByPersonId;
                 entity.UniqueId = Guid.NewGuid();
                 SqlPersonProvider.InsertPerson(entity);
 
@@ -57,7 +58,8 @@ namespace Tcc.Person.BusinessRules
 
         public bool DeletePerson(Guid UniqueId)
         {
-            return SqlPersonProvider.DeletePerson(UniqueId);
+            SqlPersonProvider.DeletePerson(UniqueId);
+            return true;
         }
 
 
@@ -94,7 +96,8 @@ namespace Tcc.Person.BusinessRules
 
         public bool DeletePersonClassification(Guid UniqueId)
         {
-            return SqlPersonProvider.DeletePersonClassification(UniqueId);
+            SqlPersonProvider.DeletePersonClassification(UniqueId);
+            return true;
         }
 
         #endregion
@@ -159,7 +162,8 @@ namespace Tcc.Person.BusinessRules
 
         public bool DeletePersonPhoneNumber(Guid UniqueId)
         {
-            return SqlPersonProvider.DeletePersonPhoneNumber(UniqueId);
+            SqlPersonProvider.DeletePersonPhoneNumber(UniqueId);
+            return true;
         }
 
         #endregion
@@ -168,7 +172,7 @@ namespace Tcc.Person.BusinessRules
 
         public IList<UserInfo> GetUserInfos()
         {
-            return SqlPersonProvider.GetUserInfos(PersonId);
+            return SqlPersonProvider.GetUserInfos();
         }
 
         public bool SaveUserInfo(UserInfo entity)
@@ -194,7 +198,8 @@ namespace Tcc.Person.BusinessRules
 
         public bool DeleteUserInfo(Guid UniqueId)
         {
-            return SqlPersonProvider.DeleteUserInfo(UniqueId);
+            SqlPersonProvider.DeleteUserInfo(UniqueId);
+            return true;
         }
 
         #endregion

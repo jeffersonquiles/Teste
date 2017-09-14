@@ -1,4 +1,4 @@
-﻿using Tcc.Framework.BusinessEntities;
+﻿u
 using Microsoft.Practices.EnterpriseLibrary.Validation;
 using Microsoft.Practices.EnterpriseLibrary.Validation.Validators;
 using System;
@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tcc.Common;
 using Tcc.Core.BusinessEntities;
 
 namespace Tcc.Person.BusinessEntities

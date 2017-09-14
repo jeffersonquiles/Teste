@@ -7,6 +7,8 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
 using Marfrig.Web.Host.App_Start;
+using System.Net.Http.Headers;
+using System.Net.Http.Formatting;
 
 namespace Tcc.Web.Host
 {
@@ -16,6 +18,9 @@ namespace Tcc.Web.Host
         {
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            GlobalConfiguration.Configuration.Formatters.Clear();
+            GlobalConfiguration.Configuration.Formatters.Add(new JsonMediaTypeFormatter());
+            GlobalConfiguration.Configuration.Formatters.Add(new XmlMediaTypeFormatter());
 
         }
     }

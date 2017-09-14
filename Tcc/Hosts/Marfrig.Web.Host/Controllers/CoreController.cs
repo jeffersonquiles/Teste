@@ -101,5 +101,27 @@ namespace Tcc.Web.Host.Controllers
 
         #endregion
 
+        [HttpPost]
+        public IHttpActionResult Test()
+        {
+            IList<Tcc.Person.BusinessEntities.Person> lstPerson = new List<Person.BusinessEntities.Person>();
+
+            Person.BusinessEntities.Person Laurent = new Person.BusinessEntities.Person();
+            Person.BusinessEntities.Person Jefferson = new Person.BusinessEntities.Person();
+
+            Laurent.Name = "Laurent";
+            Laurent.CreateDate = DateTime.Now;
+
+            Jefferson.Name = "Jefferson";
+            Jefferson.CreateDate = DateTime.Now;
+
+            lstPerson.Add(Laurent);
+            lstPerson.Add(Jefferson);
+
+            return ApiResult<IList<Person.BusinessEntities.Person>>(() =>
+            {
+                return lstPerson;
+            });
+        }
     }
 }

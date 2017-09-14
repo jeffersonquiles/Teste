@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Tcc.Core.BusinessEntities
 {
-    public class PhoneProvider : BusinessEntityBase <PhoneProvider>
+    public class PhoneProvider 
     {
         public string Name { get; set; }
 

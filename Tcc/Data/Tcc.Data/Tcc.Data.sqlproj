@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="script 0.0.0.sql" />
+    <None Include="scriptTeste.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="script 0.0.1.sql" />

@@ -26,11 +26,11 @@ namespace Tcc.Web.Host.Controllers
         #region Person
 
         [HttpPost]
-        public IHttpActionResult GetPeoples()
+        public IHttpActionResult GetPeople()
         {
             return ApiResult<IList<Person.BusinessEntities.Person>>(() =>
             {
-                return PersonBusinessRules.GetPeoples();
+                return PersonBusinessRules.GetPeople();
             });
         }
 
@@ -150,11 +150,11 @@ namespace Tcc.Web.Host.Controllers
         #region UserInfo
 
         [HttpPost]
-        public IHttpActionResult GetUserInfos([FromBody] int PersonId)
+        public IHttpActionResult GetUserInfos()
         {
             return ApiResult<IList<UserInfo>>(() =>
             {
-                return PersonBusinessRules.GetUserInfos(PersonId);
+                return PersonBusinessRules.GetUserInfos();
             });
         }
 

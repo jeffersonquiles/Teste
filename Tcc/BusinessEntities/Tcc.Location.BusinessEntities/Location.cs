@@ -1,6 +1,6 @@
-﻿using Tcc.Framework.BusinessEntities;
-using Microsoft.Practices.EnterpriseLibrary.Validation;
+﻿using Microsoft.Practices.EnterpriseLibrary.Validation;
 using Microsoft.Practices.EnterpriseLibrary.Validation.Validators;
+using Tcc.Common;
 
 namespace Tcc.Location.BusinessEntities
 {

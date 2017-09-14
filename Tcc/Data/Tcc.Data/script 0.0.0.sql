@@ -1,5 +1,6 @@
-﻿/*********************************** COUNTRY *************************************/
+﻿
 
+/*********************************** COUNTRY *************************************/
 CREATE TABLE [dbo].[Country](
 	[Id] [int] NOT NULL,
 	[Name] [varchar](50) NOT NULL,
@@ -7,10 +8,6 @@ CREATE TABLE [dbo].[Country](
 	[FIFA] [varchar](3) NULL,
 	[ISO3] [varchar](3) NOT NULL,
 	[ISO2] [varchar](2) NOT NULL,
-    [UniqueId] [uniqueidentifier] NULL,
-    [CreateDate] [datetime] NOT NULL,
-	[UpdateDate] [datetime] NULL,
-	[IsDeleted] [bit] NULL,
  CONSTRAINT [PK_Country_1] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -31,9 +28,6 @@ CREATE TABLE [dbo].[StateProvince](
 	[Latitude] [decimal](12, 8) NULL,
 	[Longitude] [decimal](12, 8) NULL,
 	[Region] [varchar](100) NULL,
-    [UniqueId] [uniqueidentifier] NULL,
-    [CreateDate] [datetime] NOT NULL,
-	[UpdateDate] [datetime] NULL,
 	[IsDeleted] [bit] NULL,
  CONSTRAINT [PK_State] PRIMARY KEY CLUSTERED 
 (
@@ -51,6 +45,7 @@ GO
 
 /*********************************** CITY *************************************/
 
+DROP TABLE CITY
 CREATE TABLE [dbo].[City](
 	[Id] [int] NOT NULL,
 	[StateProvinceId] [int] NOT NULL,
@@ -117,6 +112,7 @@ GO
 
 /*********************************** LOCATION *************************************/
 
+DROP TABLE LOCATION
 CREATE TABLE [dbo].[Location](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[LocationTypeId] [int] NOT NULL,
