@@ -1,5 +1,4 @@
-﻿using Tcc.Framework.Patterns.Providers.Factory;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration.Provider;
 using System.Linq;
@@ -67,6 +66,136 @@ namespace Tcc.Core.Providers
 
         #endregion
 
+        #region FreeTrainingTypes 
 
+        public virtual IList<FreeTrainingType> GetFreeTrainingTypes()
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+
+        #region FreeTraining 
+
+        public virtual IList<FreeTraining> GetFreeTraining(Int32 FreeTrainingTypeId)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+
+        #region ExerciseFreeTraining
+
+        public virtual IList<ExerciseFreeTraining> GetExerciseFreeTraining(Int32 FreeTrainingId)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+
+        #region WeekDay
+
+        public virtual IList<WeekDay> GetWeekDays()
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+
+        #region Class
+
+        public virtual int UpdateClass(Class entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual int InsertClass(Class entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual IList<Class> GetClasses()
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual int DeleteClass(Guid UniqueId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual IList<Class> GetClassesByTeacherId(int TeacherId)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+
+        #region ClassPeriod
+
+        public virtual int InsertClassPeriod(ClassPeriod entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual int DeleteClassPeriod(int ClassId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual IList<ClassPeriod>  GetClassPeriod(int ClassId)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+
+        #region TeacherDetail
+
+        public virtual IList<Teacher> GetTeachersToDetail()
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual TeacherDetail GetTeacherDetails(int TeacherId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual int InsertTeacherDetail(TeacherDetail entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual int UpdateTeacherDetail(TeacherDetail entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual int DeleteTeacherDetail(Guid UniqueId)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+
+        #region Qualification
+
+        public virtual int InsertQualification(Qualifications entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual int DeleteQualification(int TeacherDetailId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual IList<Qualifications> GetQualifications (int TeacherDetailId)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        #endregion
     }
 }

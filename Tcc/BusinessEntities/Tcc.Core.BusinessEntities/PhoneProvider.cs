@@ -1,5 +1,4 @@
-﻿using Tcc.Framework.BusinessEntities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +8,7 @@ namespace Tcc.Core.BusinessEntities
 {
     public class PhoneProvider 
     {
+        public int Id { get; set; }
         public string Name { get; set; }
 
         public PhoneProvider()

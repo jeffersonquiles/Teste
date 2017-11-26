@@ -35,10 +35,10 @@ namespace Tcc.Person.BusinessRules
 
         public bool SavePerson(Person.BusinessEntities.Person entity)
         {
+
             entity.UpdateDate = DateTime.Now;
             entity.UpdateByPersonId = 2;
             entity.IsDeleted = false;
-            entity.BirtyDay = DateTime.Now;
             entity.CreateDate = entity.UpdateDate;
             entity.CreateByPersonId = entity.UpdateByPersonId;
 
@@ -200,6 +200,15 @@ namespace Tcc.Person.BusinessRules
         {
             SqlPersonProvider.DeleteUserInfo(UniqueId);
             return true;
+        }
+
+        #endregion
+
+        #region Teacher 
+
+        public  IList<Tcc.Person.BusinessEntities.Person> GetTeachers()
+        {
+            return SqlPersonProvider.GetTeachers();
         }
 
         #endregion

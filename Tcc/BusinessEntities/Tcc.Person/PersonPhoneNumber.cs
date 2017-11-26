@@ -1,6 +1,4 @@
-﻿using Microsoft.Practices.EnterpriseLibrary.Validation;
-using Microsoft.Practices.EnterpriseLibrary.Validation.Validators;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +8,7 @@ using Tcc.Core.BusinessEntities;
 
 namespace Tcc.Person.BusinessEntities
 {
-    [HasSelfValidation]
+
     public class PersonPhoneNumber : BusinessEntityBase<PersonPhoneNumber>
     {
         public int PersonId { get; set; }
@@ -29,32 +27,32 @@ namespace Tcc.Person.BusinessEntities
 
         }
 
-        #region Validation
-        [SelfValidation]
-        public void Validate(ValidationResults results)
-        {
-            if (PersonId <= 0)
-            {
-                results.AddResult(new ValidationResult("Selecione a pessoa.", null, "PersonId", "PersonPhoneNumber", null));
-            }
-            if (PhoneProviderId <= 0)
-            {
-                results.AddResult(new ValidationResult("Selecione a operadora.", null, "PhoneProviderId", "PersonPhoneNumber", null));
-            }
-            if (PhoneNumberTypeId <= 0)
-            {
-                results.AddResult(new ValidationResult("Selecione o tipo de telefone.", null, "PhoneNumberTypeId", "PersonPhoneNumber", null));
-            }
-            if (LocationId <= 0)
-            {
-                results.AddResult(new ValidationResult("Selecione o endereço.", null, "LocationId", "PersonPhoneNumber", null));
-            }
-            if (string.IsNullOrEmpty(Number))
-            {
-                results.AddResult(new ValidationResult("Informe o número do telefone.", null, "Number", "PersonPhoneNumber", null));
-            }
+        //////#region Validation
+        //////[SelfValidation]
+        //////public void Validate(ValidationResults results)
+        //////{
+        //////    if (PersonId <= 0)
+        //////    {
+        //////        results.AddResult(new ValidationResult("Selecione a pessoa.", null, "PersonId", "PersonPhoneNumber", null));
+        //////    }
+        //////    if (PhoneProviderId <= 0)
+        //////    {
+        //////        results.AddResult(new ValidationResult("Selecione a operadora.", null, "PhoneProviderId", "PersonPhoneNumber", null));
+        //////    }
+        //////    if (PhoneNumberTypeId <= 0)
+        //////    {
+        //////        results.AddResult(new ValidationResult("Selecione o tipo de telefone.", null, "PhoneNumberTypeId", "PersonPhoneNumber", null));
+        //////    }
+        //////    if (LocationId <= 0)
+        //////    {
+        //////        results.AddResult(new ValidationResult("Selecione o endereço.", null, "LocationId", "PersonPhoneNumber", null));
+        //////    }
+        //////    if (string.IsNullOrEmpty(Number))
+        //////    {
+        //////        results.AddResult(new ValidationResult("Informe o número do telefone.", null, "Number", "PersonPhoneNumber", null));
+        //////    }
 
-        }
-        #endregion
+        //////}
+        //////#endregion
     }
 }

@@ -101,6 +101,107 @@ namespace Tcc.Web.Host.Controllers
 
         #endregion
 
+        #region FreeTrainingType 
+
+        [HttpPost]
+
+        public IHttpActionResult GetFreeTrainingTypes()
+        {
+            return ApiResult<IList<FreeTrainingType>>(() =>
+           {
+               return CoreBusinessRules.GetFreeTrainingTypes();
+           });
+        }
+
+        #endregion
+
+        #region FreeTraining 
+
+        [HttpPost]
+        public IHttpActionResult GetFreeTraining([FromBody] Int32 FreeTrainingTypeId)
+        {
+            return ApiResult<IList<FreeTraining>>(() =>
+            {
+                return CoreBusinessRules.GetFreeTraining(FreeTrainingTypeId);
+            });
+        }
+
+        #endregion
+
+        #region WeekDay
+        [HttpPost]
+        public IHttpActionResult GetWeekDays()
+        {
+            return ApiResult<IList<WeekDay>>(() =>
+           {
+               return CoreBusinessRules.GetWeekDays();
+           });
+        }
+
+        #endregion
+
+        #region Class
+        [HttpPost]
+        public IHttpActionResult SaveClass (Class entity)
+        {
+            return ApiResult<bool>(() =>
+            {
+                return CoreBusinessRules.SaveClass(entity);
+            });
+        }
+
+        [HttpPost]
+        public IHttpActionResult GetClasses()
+        {
+            return ApiResult<IList<Class>>(() =>
+            {
+                return CoreBusinessRules.GetClasses();
+            });
+        }
+
+        [HttpPost]
+        public IHttpActionResult DeleteClass ([FromBody] Guid UniqueId)
+        {
+            return ApiResult<bool>(() =>
+            {
+                return CoreBusinessRules.DeleteClass(UniqueId);
+            });
+        }
+
+        #endregion
+
+        #region TeacherDetail
+        [HttpPost]
+        public IHttpActionResult GetTeachersToDetail()
+        {
+            return ApiResult<IList<Teacher>>(() =>
+            {
+                return CoreBusinessRules.GetTeachersToDetail();
+            });
+        }
+
+        [HttpPost]
+        public IHttpActionResult SaveTeacherDetail(TeacherDetail entity)
+        {
+            return ApiResult<bool>(() =>
+            {
+                return CoreBusinessRules.SaveTeacherDetail(entity);
+            });
+        }
+
+        [HttpPost]
+        public IHttpActionResult DeleteTeacherDetail([FromBody] Guid UniqueId)
+        {
+            return ApiResult<bool>(() =>
+            {
+                return CoreBusinessRules.DeleteTeacherDetail(UniqueId);
+            });
+        }
+
+        #endregion
+
+        #region Test
+
         [HttpPost]
         public IHttpActionResult Test()
         {
@@ -123,5 +224,8 @@ namespace Tcc.Web.Host.Controllers
                 return lstPerson;
             });
         }
+
+        #endregion
+
     }
 }

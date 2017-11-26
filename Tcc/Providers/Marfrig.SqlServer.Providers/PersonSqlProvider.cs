@@ -47,5 +47,23 @@ namespace Tcc.SqlServer.Providers
         }
 
         #endregion
+
+        #region Teacher 
+
+        public override IList<Tcc.Person.BusinessEntities.Person> GetTeachers()
+        {
+            return TccContext.Tcc.DB.Sql(@" select Person.*
+
+                    from Person Person
+
+                    inner join PersonClassification PersonClassification
+                    on PersonClassification.PersonId = Person.Id
+                    and PersonClassification.ClassificationTypeId = 2
+            ").QueryMany<Tcc.Person.BusinessEntities.Person>();
+        }
+
+
+
+        #endregion
     }
 }

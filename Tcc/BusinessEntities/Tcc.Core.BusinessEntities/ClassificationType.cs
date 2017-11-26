@@ -1,5 +1,4 @@
-﻿using Tcc.Framework.BusinessEntities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +8,9 @@ namespace Tcc.Core.BusinessEntities
 {
     public class ClassificationType
     {
+        public int Id { get; set; }
         public string Name { get; set; }
+        public DateTime CreateDate { get; set; }
 
         public ClassificationType()
         {

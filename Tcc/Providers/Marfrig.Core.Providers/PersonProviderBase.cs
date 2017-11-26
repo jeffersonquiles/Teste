@@ -122,6 +122,16 @@ namespace Tcc.Core.Providers
 
         #endregion
 
-        
+        #region Teacher 
+
+        public virtual IList<Tcc.Person.BusinessEntities.Person> GetTeachers()
+        {
+            throw new NotImplementedException();
+        }
+
+
+
+        #endregion
+
     }
 }

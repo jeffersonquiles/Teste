@@ -177,5 +177,17 @@ namespace Tcc.Web.Host.Controllers
         }
 
         #endregion
+
+        #region Teacher 
+        [HttpPost]
+        public IHttpActionResult GetTeachers()
+        {
+            return ApiResult<IList<Tcc.Person.BusinessEntities.Person>>(() =>
+            {
+                return PersonBusinessRules.GetTeachers();
+            });
+        }
+
+        #endregion
     }
 }

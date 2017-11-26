@@ -4,7 +4,7 @@ using System.Configuration.Provider;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tcc.Framework.Patterns.Providers.Factory;
+
 
 namespace Tcc.Common {
 
@@ -49,10 +49,6 @@ namespace Tcc.Common {
             SqlServer
         }
 
-        public FactoryBase<T> Providers
-        {
-            get { return FactoryBase<T>.GetInstance(ProviderName); }
-        }
 
         #endregion
     }

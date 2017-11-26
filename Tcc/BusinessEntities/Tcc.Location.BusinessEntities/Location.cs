@@ -1,10 +1,10 @@
-﻿using Microsoft.Practices.EnterpriseLibrary.Validation;
-using Microsoft.Practices.EnterpriseLibrary.Validation.Validators;
+﻿
+using System;
 using Tcc.Common;
 
 namespace Tcc.Location.BusinessEntities
 {
-    [HasSelfValidation]
+
     public class Location : BusinessEntityBase<Location>
     {
         public int LocationTypeId { get; set; }
@@ -24,38 +24,38 @@ namespace Tcc.Location.BusinessEntities
         public StateProvince StateProvince { get; set; }
         public City City { get; set; }
         public Country Country { get; set; }
-
+       
         public Location()
         {
 
         }
-
-        #region Validation
-        [SelfValidation]
-        public void Validate(ValidationResults results)
-        {
-            if (LocationTypeId <= 0)
-            {
-                results.AddResult(new ValidationResult("Selecione o tipo de localização.", null, "LocationTypeId", "Location", null));
-            }
-            if (StateProvinceId <= 0)
-            {
-                results.AddResult(new ValidationResult("Selecione o estado.", null, "StateProvinceId", "Location", null));
-            }
-            if (CityId <= 0)
-            {
-                results.AddResult(new ValidationResult("Selecione a cidade.", null, "CityId", "Location", null));
-            }
-            if (string.IsNullOrEmpty(AddressName))
-            {
-                results.AddResult(new ValidationResult("Informe o endereço.", null, "AddressName", "Location", null));
-            }
-            if (Number <= 0)
-            {
-                results.AddResult(new ValidationResult("Informe o número da residência.", null, "Number", "Location", null));
-            }
-
-        }
-        #endregion
     }
+
+
+        //#region Validation
+        //[SelfValidation]
+        //public void Validate(ValidationResults results)
+        //{
+        //    if (LocationTypeId <= 0)
+        //    {
+        //        results.AddResult(new ValidationResult("Selecione o tipo de localização.", null, "LocationTypeId", "Location", null));
+        //    }
+        //    if (StateProvinceId <= 0)
+        //    {
+        //        results.AddResult(new ValidationResult("Selecione o estado.", null, "StateProvinceId", "Location", null));
+        //    }
+        //    if (CityId <= 0)
+        //    {
+        //        results.AddResult(new ValidationResult("Selecione a cidade.", null, "CityId", "Location", null));
+        //    }
+        //    if (string.IsNullOrEmpty(AddressName))
+        //    {
+        //        results.AddResult(new ValidationResult("Informe o endereço.", null, "AddressName", "Location", null));
+        //    }
+        //    if (this.Number <= 0)
+        //    {
+        //        results.AddResult(new ValidationResult("Informe o número da residência.", null, "Number", "Location", null));
+        //    }
+
+        //}
 }

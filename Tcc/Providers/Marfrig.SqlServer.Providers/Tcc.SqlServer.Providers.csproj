@@ -34,10 +34,6 @@
       <HintPath>..\..\Hosts\Marfrig.Integration.Host\packages\FluentData.3.0.1.0\lib\FluentData.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\Hosts\Marfrig.Integration.Host\packages\Microsoft.Practices.EnterpriseLibrary.Common.dll.3.1.0\lib\2.0\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\Hosts\Marfrig.Integration.Host\packages\Microsoft.Practices.ObjectBuilder.dll.3.1.0\lib\2.0\Microsoft.Practices.ObjectBuilder.dll</HintPath>
       <Private>True</Private>
@@ -98,29 +94,15 @@
       <Project>{9E9015AC-871E-4275-BE2A-8F6BCCF96548}</Project>
       <Name>Tcc.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\Marfrig.Framework.BusinessEntities\Tcc.Framework.BusinessEntities.csproj">
-      <Project>{331dcdec-1790-4097-88ef-3cc6d3011d2d}</Project>
-      <Name>Tcc.Framework.BusinessEntities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Framework\Marfrig.Framework.Patterns.Providers\Tcc.Framework.Patterns.Providers.csproj">
-      <Project>{e49b3a16-ca12-4340-848e-492e55651f5a}</Project>
-      <Name>Tcc.Framework.Patterns.Providers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Framework\Marfrig.Framework.Patterns.RequestResponse\Tcc.Framework.Patterns.RequestResponse.csproj">
-      <Project>{962d9a10-a4c3-4602-8244-368aa31addb7}</Project>
-      <Name>Tcc.Framework.Patterns.RequestResponse</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Framework\Marfrig.Framework.Patterns.TranslateEntity\Tcc.Framework.Patterns.TranslateEntity.csproj">
-      <Project>{3f49bdd3-9132-49e3-8ac9-e38dd983a599}</Project>
-      <Name>Tcc.Framework.Patterns.TranslateEntity</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Marfrig.Core.Providers\Tcc.SqlServer.Base.Providers.csproj">
       <Project>{61fb0fa9-6185-4f41-9912-0433d253d748}</Project>
       <Name>Tcc.SqlServer.Base.Providers</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

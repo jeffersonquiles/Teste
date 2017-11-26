@@ -46,5 +46,37 @@ namespace Tcc.Core.BusinessRulesInterfaces
 
         #endregion
 
+        #region FreeTrainingTypes 
+
+        IList<FreeTrainingType> GetFreeTrainingTypes();
+
+        #endregion
+
+        #region FreeTraining 
+
+        IList<FreeTraining> GetFreeTraining(Int32 FreeTrainingTypeId);
+
+        #endregion
+
+        #region WeekDay
+
+        IList<WeekDay> GetWeekDays();
+
+        #endregion
+
+        #region Class
+
+        bool SaveClass(Class entity);
+        IList<Class> GetClasses();
+        bool DeleteClass(Guid UniqueId);
+        #endregion
+
+        #region TeacherDetail
+
+        IList<Teacher> GetTeachersToDetail();
+        bool SaveTeacherDetail(TeacherDetail entity);
+        bool DeleteTeacherDetail(Guid UniqueId);
+        
+        #endregion
     }
 }

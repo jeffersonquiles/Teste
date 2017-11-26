@@ -42,6 +42,17 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="Teste-Deployment" Order="1">
+          <Destination Path="" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=tccfatecscs.database.windows.net%3bInitial Catalog=tcc%3bPersist Security Info=True%3bUser ID=fatecscs%3bPassword=123Fatec" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Release\AutoScripts\Teste-Deployment_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -63,34 +74,6 @@
     </Reference>
     <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\Marfrig.Integration.Host\packages\Microsoft.Owin.Security.OAuth.3.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\Marfrig.Integration.Host\packages\Microsoft.Practices.EnterpriseLibrary.Common.dll.3.1.0\lib\2.0\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\Marfrig.Integration.Host\packages\Microsoft.Practices.ObjectBuilder.dll.3.1.0\lib\2.0\Microsoft.Practices.ObjectBuilder.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\Marfrig.Integration.Host\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
-      <HintPath>..\Marfrig.Integration.Host\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
-      <HintPath>..\Marfrig.Integration.Host\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Practices.Unity.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
-      <HintPath>..\Marfrig.Integration.Host\packages\Unity.Mvc.4.0.1\lib\net45\Microsoft.Practices.Unity.Mvc.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
-      <HintPath>..\Marfrig.Integration.Host\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -213,7 +196,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="Unity.config" />
+    <None Include="Properties\PublishProfiles\tccfatecscs - FTP %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\tccfatecscs - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\tccfatecscs - Web Deploy %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\tccfatecscs - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -227,7 +213,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\BusinessEntities\Tcc.Core.BusinessEntities\Tcc.Core.BusinessEntities.csproj">
-      <Project>{E82F0E93-4CCD-47E3-96E8-598FF4B9921F}</Project>
+      <Project>{e82f0e93-4ccd-47e3-96e8-598ff4b9921f}</Project>
       <Name>Tcc.Core.BusinessEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\BusinessEntities\Tcc.Gyn.BusinessEntities\Tcc.Gyn.BusinessEntities.csproj">
@@ -235,7 +221,7 @@
       <Name>Tcc.Gyn.BusinessEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\BusinessEntities\Tcc.Location.BusinessEntities\Tcc.Location.BusinessEntities.csproj">
-      <Project>{BD93013B-9E6A-4EC6-B870-2F86057EDE11}</Project>
+      <Project>{bd93013b-9e6a-4ec6-b870-2f86057ede11}</Project>
       <Name>Tcc.Location.BusinessEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\BusinessEntities\Tcc.Person\Tcc.Person.BusinessEntities.csproj">
@@ -251,56 +237,36 @@
       <Name>Tcc.Core.BusinessRules</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\BusinessRules\Tcc.Gyn.BusinessRulesInterfaces\Tcc.Gyn.BusinessRulesInterfaces.csproj">
-      <Project>{F6DF7741-3E8C-4254-A314-99768AE5C530}</Project>
+      <Project>{f6df7741-3e8c-4254-a314-99768ae5c530}</Project>
       <Name>Tcc.Gyn.BusinessRulesInterfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\BusinessRules\Tcc.Gyn.BusinessRules\Tcc.Gyn.BusinessRules.csproj">
-      <Project>{1F1DE7EF-D8C6-4F5B-A354-BE66833B68AA}</Project>
+      <Project>{1f1de7ef-d8c6-4f5b-a354-be66833b68aa}</Project>
       <Name>Tcc.Gyn.BusinessRules</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\BusinessRules\Tcc.Location.BusinessRulesInterfaces\Tcc.Location.BusinessRulesInterfaces.csproj">
-      <Project>{490A64B0-995E-48DD-8796-4ED9D7155C86}</Project>
+      <Project>{490a64b0-995e-48dd-8796-4ed9d7155c86}</Project>
       <Name>Tcc.Location.BusinessRulesInterfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\BusinessRules\Tcc.Location.BusinessRules\Tcc.Location.BusinessRules.csproj">
-      <Project>{FA98D3EE-C6B9-4728-BD9B-8B888F91A8D4}</Project>
+      <Project>{fa98d3ee-c6b9-4728-bd9b-8b888f91a8d4}</Project>
       <Name>Tcc.Location.BusinessRules</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\BusinessRules\Tcc.Person.BusinessRulesInterfaces\Tcc.Person.BusinessRulesInterfaces.csproj">
-      <Project>{55BC40F6-C7B6-418A-8301-2FBC34D09570}</Project>
+      <Project>{55bc40f6-c7b6-418a-8301-2fbc34d09570}</Project>
       <Name>Tcc.Person.BusinessRulesInterfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\BusinessRules\Tcc.Person.BusinessRules\Tcc.Person.BusinessRules.csproj">
-      <Project>{798F63B0-5F7D-40A0-AA30-F8729DDBB25D}</Project>
+      <Project>{798f63b0-5f7d-40a0-aa30-f8729ddbb25d}</Project>
       <Name>Tcc.Person.BusinessRules</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Common\Tcc.Common\Tcc.Common.csproj">
       <Project>{9e9015ac-871e-4275-be2a-8f6bccf96548}</Project>
       <Name>Tcc.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Exceptions\Marfrig.Exceptions\Tcc.Exceptions.csproj">
-      <Project>{8d04dfc7-338b-458c-9181-f9bafe9024c2}</Project>
-      <Name>Tcc.Exceptions</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Framework\Marfrig.Framework.BusinessEntities\Tcc.Framework.BusinessEntities.csproj">
-      <Project>{331dcdec-1790-4097-88ef-3cc6d3011d2d}</Project>
-      <Name>Tcc.Framework.BusinessEntities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Framework\Marfrig.Framework.Patterns.Providers\Tcc.Framework.Patterns.Providers.csproj">
-      <Project>{e49b3a16-ca12-4340-848e-492e55651f5a}</Project>
-      <Name>Tcc.Framework.Patterns.Providers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Framework\Marfrig.Framework.Patterns.RequestResponse\Tcc.Framework.Patterns.RequestResponse.csproj">
-      <Project>{962d9a10-a4c3-4602-8244-368aa31addb7}</Project>
-      <Name>Tcc.Framework.Patterns.RequestResponse</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Framework\Marfrig.Framework.Patterns.TranslateEntity\Tcc.Framework.Patterns.TranslateEntity.csproj">
-      <Project>{3f49bdd3-9132-49e3-8ac9-e38dd983a599}</Project>
-      <Name>Tcc.Framework.Patterns.TranslateEntity</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Framework\Marfrig.Framework.Unity.Extensions\Tcc.Framework.Unity.Extensions.csproj">
-      <Project>{fdd9efdd-340c-4230-9693-e5b4f6dce5ae}</Project>
-      <Name>Tcc.Framework.Unity.Extensions</Name>
+    <ProjectReference Include="..\..\Data\Tcc.Data\Tcc.Data.sqlproj">
+      <Project>{ab068eda-7d99-461d-8ded-d4aefd3506c5}</Project>
+      <Name>Tcc.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Providers\Marfrig.Core.Providers\Tcc.SqlServer.Base.Providers.csproj">
       <Project>{61fb0fa9-6185-4f41-9912-0433d253d748}</Project>

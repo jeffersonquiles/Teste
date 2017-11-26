@@ -72,7 +72,7 @@ namespace Tcc.Location.BusinessRules
             return SqlLocationProvider.DeleteLocation(UniqueId);
         }
 
-        public int SaveLocation(Tcc.Location.BusinessEntities.Location entity)
+        public int SaveLocation(Location.BusinessEntities.Location entity)
         {
             entity.UpdateDate = DateTime.Now;
             entity.UpdateByPersonId = 1;

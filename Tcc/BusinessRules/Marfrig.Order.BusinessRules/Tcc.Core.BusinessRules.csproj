@@ -33,14 +33,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\Hosts\Marfrig.Integration.Host\packages\Microsoft.Practices.EnterpriseLibrary.Common.dll.3.1.0\lib\2.0\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\GClaims Framework\References\EntLib\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\Hosts\Marfrig.Integration.Host\packages\Microsoft.Practices.ObjectBuilder.dll.3.1.0\lib\2.0\Microsoft.Practices.ObjectBuilder.dll</HintPath>
       <Private>True</Private>
@@ -61,31 +53,31 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\BusinessEntities\Tcc.Core.BusinessEntities\Tcc.Core.BusinessEntities.csproj">
-      <Project>{E82F0E93-4CCD-47E3-96E8-598FF4B9921F}</Project>
+      <Project>{e82f0e93-4ccd-47e3-96e8-598ff4b9921f}</Project>
       <Name>Tcc.Core.BusinessEntities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\BusinessEntities\Tcc.Gyn.BusinessEntities\Tcc.Gyn.BusinessEntities.csproj">
+      <Project>{11b840af-7f1a-454f-a203-c75f195c06dc}</Project>
+      <Name>Tcc.Gyn.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BusinessEntities\Tcc.Location.BusinessEntities\Tcc.Location.BusinessEntities.csproj">
+      <Project>{bd93013b-9e6a-4ec6-b870-2f86057ede11}</Project>
+      <Name>Tcc.Location.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BusinessEntities\Tcc.Person\Tcc.Person.BusinessEntities.csproj">
+      <Project>{0e59ae1e-22eb-4d53-800c-fd00d32938df}</Project>
+      <Name>Tcc.Person.BusinessEntities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Common\Tcc.Common\Tcc.Common.csproj">
-      <Project>{9E9015AC-871E-4275-BE2A-8F6BCCF96548}</Project>
+      <Project>{9e9015ac-871e-4275-be2a-8f6bccf96548}</Project>
       <Name>Tcc.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Exceptions\Marfrig.Exceptions\Tcc.Exceptions.csproj">
-      <Project>{8d04dfc7-338b-458c-9181-f9bafe9024c2}</Project>
-      <Name>Tcc.Exceptions</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Framework\Marfrig.Framework.BusinessEntities\Tcc.Framework.BusinessEntities.csproj">
-      <Project>{331dcdec-1790-4097-88ef-3cc6d3011d2d}</Project>
-      <Name>Tcc.Framework.BusinessEntities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Framework\Marfrig.Framework.Patterns.Providers\Tcc.Framework.Patterns.Providers.csproj">
-      <Project>{E49B3A16-CA12-4340-848E-492E55651F5A}</Project>
-      <Name>Tcc.Framework.Patterns.Providers</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Providers\Marfrig.Core.Providers\Tcc.SqlServer.Base.Providers.csproj">
       <Project>{61fb0fa9-6185-4f41-9912-0433d253d748}</Project>
       <Name>Tcc.SqlServer.Base.Providers</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Providers\Marfrig.SqlServer.Providers\Tcc.SqlServer.Providers.csproj">
-      <Project>{862DA5B6-5952-4078-8F0B-F1DEF3A59D2C}</Project>
+      <Project>{862da5b6-5952-4078-8f0b-f1def3a59d2c}</Project>
       <Name>Tcc.SqlServer.Providers</Name>
     </ProjectReference>
     <ProjectReference Include="..\Marfrig.Order.BusinessRulesInterfaces\Tcc.Core.BusinessRulesInterfaces.csproj">

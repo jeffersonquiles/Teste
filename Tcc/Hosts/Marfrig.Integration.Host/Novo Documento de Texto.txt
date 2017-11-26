@@ -1,0 +1,36 @@
+create table FreeTrainingType (
+	Id int (1,1) primary key,
+	Nome varchar (50)
+)
+
+go
+
+insert into FreeTrainingType values ('ABC'), ('ABCD'), ('ABCDE')
+
+go
+
+create table FreeTraining (
+	Id int (1,1) primary key,
+	Nome varchar (50),
+	Description varchar (200),
+	FreeTrainingTypeId int,
+	TrainingSessions varchar (100),
+	Foreign key (FreeTrainingTypeId) References FreeTrainingType(Id)
+)
+
+go
+
+insert into FreeTraining values ('A', 'Treino Peito/Biceps', '3 Séries x 10 Repetições', 1)
+go
+insert into FreeTraining values ('B', 'Treino Costa/Biceps/Abdominal', '3 Séries x 10 Repetições', 1)
+go
+insert into FreeTraining values ('C', 'Treino Perna/Lombar', '3 Séries x 10 Repetições', 1)
+go
+insert into FreeTraining values ('A', 'Treino Peito/Biceps', '4 Séries x 12 Repetições', 2)
+go
+insert into FreeTraining values ('B', 'Treino Ombro/Posterior', '4 Séries x 12 Repetições', 2)
+go
+insert into FreeTraining values ('C', 'Treino Costa/Biceps', '4 Séries x 12 Repetições', 2)
+go
+insert into FreeTraining values ('D', 'Treino Abdominal/Anterior', '4 Séries x 12 Repetições', 2)
+go

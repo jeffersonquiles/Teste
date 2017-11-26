@@ -11,6 +11,8 @@ namespace Tcc.Gyn.BusinessEntities
     {
         public string Name { get; set; }
 
+        public Tcc.Person.BusinessEntities.Person Person { get; set; }
+
         public Gyn()
         {
 

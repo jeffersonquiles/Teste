@@ -30,17 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\Hosts\Marfrig.Integration.Host\packages\Microsoft.Practices.EnterpriseLibrary.Common.dll.3.1.0\lib\2.0\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation">
-      <HintPath>..\..\Framework\Marfrig.Framework.BusinessEntities\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\Hosts\Marfrig.Integration.Host\packages\Microsoft.Practices.ObjectBuilder.dll.3.1.0\lib\2.0\Microsoft.Practices.ObjectBuilder.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\Hosts\Marfrig.Integration.Host\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -79,23 +68,13 @@
     <Compile Include="ApiResponseResult.cs" />
     <Compile Include="ApiControllerBase.cs" />
     <Compile Include="BusinessEntityBase.cs" />
+    <Compile Include="CommonValidationException.cs" />
     <Compile Include="ExpirationType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TccProviderBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Framework\Marfrig.Framework.Patterns.Providers\Tcc.Framework.Patterns.Providers.csproj">
-      <Project>{e49b3a16-ca12-4340-848e-492e55651f5a}</Project>
-      <Name>Tcc.Framework.Patterns.Providers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Framework\Marfrig.Framework.Patterns.RequestResponse\Tcc.Framework.Patterns.RequestResponse.csproj">
-      <Project>{962d9a10-a4c3-4602-8244-368aa31addb7}</Project>
-      <Name>Tcc.Framework.Patterns.RequestResponse</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

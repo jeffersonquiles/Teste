@@ -1,5 +1,4 @@
-﻿using Microsoft.Practices.EnterpriseLibrary.Validation;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -42,48 +41,48 @@ namespace Tcc.Common
             return result;
         }
 
-        public ValidationResult formatMessage(string tag, string key, string message)
-        {
-            return new ValidationResult(
-                message: message,
-                target: this,
-                key: key,
-                tag: tag,
-                validator: null
-            );
-        }
+        //public ValidationResult formatMessage(string tag, string key, string message)
+        //{
+        //    return new ValidationResult(
+        //        message: message,
+        //        target: this,
+        //        key: key,
+        //        tag: tag,
+        //        validator: null
+        //    );
+        //}
 
-        public ValidationResults GetErrors<TValidation>()
-        {
-            Validator<TValidation> validator = ValidationFactory.CreateValidator<TValidation>();
-            return validator.Validate(this);
-        }
+        //public ValidationResults GetErrors<TValidation>()
+        //{
+        //    Validator<TValidation> validator = ValidationFactory.CreateValidator<TValidation>();
+        //    return validator.Validate(this);
+        //}
 
-        public string GetMessageErrors<TValidation>()
-        {
-            Validator<TValidation> validator = ValidationFactory.CreateValidator<TValidation>();
-            ValidationResults results = validator.Validate(this);
-            if (!results.IsValid)
-            {
-                StringBuilder builder = new StringBuilder();
-                foreach (ValidationResult result in results)
-                {
-                    builder.AppendLine(
-                        string.Format(
-                            CultureInfo.CurrentCulture,
-                            "{0}: {1}",
-                            result.Tag,
-                            result.Message));
-                }
+        //public string GetMessageErrors<TValidation>()
+        //{
+        //    Validator<TValidation> validator = ValidationFactory.CreateValidator<TValidation>();
+        //    ValidationResults results = validator.Validate(this);
+        //    if (!results.IsValid)
+        //    {
+        //        StringBuilder builder = new StringBuilder();
+        //        foreach (ValidationResult result in results)
+        //        {
+        //            builder.AppendLine(
+        //                string.Format(
+        //                    CultureInfo.CurrentCulture,
+        //                    "{0}: {1}",
+        //                    result.Tag,
+        //                    result.Message));
+        //        }
 
-                return builder.ToString();
-            }
+        //        return builder.ToString();
+        //    }
 
-            return string.Empty;
-        }
+        //    return string.Empty;
+        //}
     }
 
-    public abstract class BusinessEntityBase<T> : BusinessEntityBase
+    public abstract class BusinessEntityBase<T>  : BusinessEntityBase
     {
         public int Id { get; set; }
         public Guid UniqueId { get; set; }

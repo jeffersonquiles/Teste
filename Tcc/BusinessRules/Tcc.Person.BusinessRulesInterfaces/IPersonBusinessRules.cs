@@ -61,5 +61,12 @@ namespace Tcc.Person.BusinessRulesInterfaces
 
         #endregion
 
+        #region Teacher 
+
+        IList<Tcc.Person.BusinessEntities.Person> GetTeachers();
+
+
+        #endregion
+
     }
 }

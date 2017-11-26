@@ -12,11 +12,8 @@ namespace Marfrig.Web.Host.App_Start
     using WebApiContrib.IoC.Ninject;
     using Tcc.Core.BusinessRulesInterfaces;
     using Tcc.Core.BusinessRules;
-    using Microsoft.Practices.Unity;
-    using Microsoft.Practices.Unity.Configuration;
     using System.Configuration;
     using System.Web.Mvc;
-    using Microsoft.Practices.Unity.Mvc;
     using Tcc.Core.Providers;
     using Tcc.SqlServer.Providers;
     using Tcc.Person.BusinessRulesInterfaces;

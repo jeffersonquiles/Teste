@@ -27,7 +27,16 @@ namespace Tcc.SqlServer.Providers
 
         public override IList<Tcc.Gyn.BusinessEntities.Gyn> GetGyns()
         {
-            return TccContext.Tcc.DB.Sql(@"select * from Gyn").QueryMany<Tcc.Gyn.BusinessEntities.Gyn>();
+            var lst = TccContext.Tcc.DB.Sql(@"select 
+                                            Gyn.*,
+                                            Person.Name as 'Person_Name'
+
+                                            from Gyn Gyn
+                                
+                                            inner join Person Person
+                                            on Person.Id = Gyn.PersonId").QueryMany<Tcc.Gyn.BusinessEntities.Gyn>();
+
+            return lst;
         }
 
         #endregion
